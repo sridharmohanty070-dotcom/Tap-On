@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #eff2f8;
+    color: #fff;
+   
+
+}
+h1 {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 50px;
+    color: rgb(234, 183, 89);
+}
+
+.container {
+    width: 400px;
+    height: 380px;
+    border: none;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 150px;
+    
+}
+label{
+    margin-left: 30px;
+    color: black;
+    font-weight: bold;
+}
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(11, 3, 83);
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.input {
+    margin-top: 35px;
+}
+
+#email {
+    height: 40px;
+    width: 350px;
+    
+    margin-left: 30px;
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+#username:hover{
+    border-color: rgb(0, 153, 255);
+}
+
+#password {
+    height: 40px;
+    width: 350px;
+    
+    margin-left: 30px;
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+#password:hover{
+    border-color: rgb(0, 153, 255);
+}
+
+.forget {
+   margin-top: 20px; 
+   margin-left: 30px;
+
+}
+
+.forget a {
+    color: rgb(34, 0, 255);
+    text-decoration: none;
+}
+
+.forget a:hover{
+    color: rgb(11, 1, 52);
+}
+#signup {
+    margin-left: 155px;
+}
+#button {
+    margin-top: 30px;
+    height: 40px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    background: rgb(15, 15, 65);
+    margin-left: 30px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+#button:hover{
+    background: rgb(4, 1, 132);
+    color: #fff;
+    transform: scale(1.1);
+}
+li {
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    list-style: none;
+    margin-left: 30px;
+
+}

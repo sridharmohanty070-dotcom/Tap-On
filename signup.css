@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: rgb(245, 245, 249);
+    color: black;
+}
+h1{
+    font-size: 50px;
+    color: rgb(234, 183, 89);
+    margin-left: 30px;
+    margin-top: 30px;
+    position: sticky;
+}
+label{
+    cursor: default;
+    
+    margin-left: 30px;
+    font-weight: bold;
+    
+}
+.label{
+    margin-top: 10px;
+}
+
+.box {
+    width: 450px;
+    
+    border: none;
+    padding: 10px;
+    
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 90px;
+    
+}
+#register {
+    height: 40px;
+    width: 350px;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    
+}
+#register:hover{
+    border-color: rgb(0, 153, 255);
+}
+#name{
+    height: 40px;
+    width: 350px;
+    
+    margin-left: 30px;
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+} 
+#name:hover{
+    border-color: rgb(0, 153, 255);
+}
+h2 {
+    text-align: center;
+    color: #6a0cee;
+}
+#dob{
+    height: 40px;
+    width: 350px;
+    
+    margin-left: 30px;
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+#dob:hover{
+    border-color: rgb(0, 153, 255);
+}
+
+#email{
+    height: 40px;
+    width: 350px;
+    
+    margin-left: 30px;
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+#email:hover{
+    border-color: rgb(0, 153, 255);
+}
+#username{
+    height: 40px;
+    width: 350px;
+    
+    margin-left: 30px;
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+#username:hover{
+    border-color: rgb(0, 153, 255);
+}
+#password{
+    height: 40px;
+    width: 350px;
+    
+    margin-left: 30px;
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+#password:hover{
+    border-color: rgb(0, 153, 255);
+}
+#submit{
+    height: 40px;
+    width: 150px;
+    background: rgb(101, 0, 253);
+    color: #fff;
+    margin-left: 230px;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+#submit:hover{
+    background: #8a3ff4;
+}

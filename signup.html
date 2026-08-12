@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign up</title>
+</head>
+<body>
+   <h1>Tap on</h1>
+    <form class="box" id="signupForm" onsubmit="event.preventDefault(); signup();">
+        <h2>Sign up</h2><br>
+        <div class="label"><label>Registration</label> <br>
+       <input type="text" id="register" placeholder="Enetr registration no." autocomplete="off"></div><br> 
+       <label>Name</label> <br>
+       <input type="text" id="name" placeholder="Full name" autocomplete="off"><br><br>
+       <!-- <label>DOB</label><br>
+       <input type="date" id="dob" placeholder="DOB" autocomplete="off"><br><br> -->
+       <label>Email</label> <br>
+       <input type="email" id="email" placeholder="Email" autocomplete="off"><br><br>
+       <!-- <label>Username</label> <br>
+       <input type="text" id="username" placeholder="Create Username" maxlength="15" autocomplete="off"><br><br>-->
+       <label>Password</label><br> 
+       <input type="password" id="password" placeholder="Create Password" maxlength="15" autocomplete="off"><br><br>
+       <button type="button" onclick="signup()" id="submit">Submit</button>
+       </form>
+ 
+    
+    <script type="module" src="signup.js"></script>
+</body>
+</html>

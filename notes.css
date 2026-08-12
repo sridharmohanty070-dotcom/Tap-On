@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
+
+h1 {
+    margin: 20px;
+    color: aqua;
+
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+#search {
+    width: 200px;
+    height: 29px;
+    padding: 10px;
+    border: none;
+    margin: 20px;
+    margin-right: 50px;
+    font-size: 15px;
+    display: flex;
+    border-radius: 15px;
+    transition: width 0.3s ease-in-out;
+    flex-wrap: wrap;
+}
+
+#search:focus {
+    width: 350px;
+    outline: none;
+}
+
+
