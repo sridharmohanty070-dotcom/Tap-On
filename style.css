@@ -25,6 +25,10 @@ nav {
     flex-wrap: wrap;
 }
 
+#time {
+    color: #38bdf8;
+}
+
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
