@@ -8,6 +8,7 @@ body {
     font-family: sans-serif;
     background: #eff2f8;
     color: #fff;
+    backdrop-filter: blur(2px);
    
 
 }
