@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
     <link rel="stylesheet" href="signup.css">
-    <title>Sign up</title>
 </head>
 <body>
-   <h1>Tap on</h1>
-    <form class="box" id="signupForm" onsubmit="event.preventDefault(); signup();">
-        <h2>Sign up</h2><br>
-        <div class="label"><label>Registration</label> <br>
-       <input type="text" id="register" placeholder="Enetr registration no." autocomplete="off"></div><br> 
-       <label>Name</label> <br>
-       <input type="text" id="name" placeholder="Full name" autocomplete="off"><br><br>
-       <!-- <label>DOB</label><br>
-       <input type="date" id="dob" placeholder="DOB" autocomplete="off"><br><br> -->
-       <label>Email</label> <br>
-       <input type="email" id="email" placeholder="Email" autocomplete="off"><br><br>
-       <!-- <label>Username</label> <br>
-       <input type="text" id="username" placeholder="Create Username" maxlength="15" autocomplete="off"><br><br>-->
-       <label>Password</label><br> 
-       <input type="password" id="password" placeholder="Create Password" maxlength="15" autocomplete="off"><br><br>
-       <button type="button" onclick="signup()" id="submit">Submit</button>
-       </form>
- 
-    
-    <script type="module" src="signup.js"></script>
+
+    <div class="signup-container">
+        <form class="signup-form">
+
+            <h1>Create Account</h1>
+            <p>Sign up to get started</p>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+
+            <button type="submit">Sign Up</button>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </form>
+    </div>
+
+    <script type="module" src="signUp.js"></script>
+
 </body>
 </html>

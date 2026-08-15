@@ -3,43 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
     <title>Login</title>
+
+    <link rel="stylesheet" href="signup.css">
 </head>
+
 <body>
-     <nav class="bar">
-       <h1>Tap on</h1> 
-    </nav>
-    <div id="loginForm" class="container">
-        <h2>Log in</h2>
-       
-        <div class="input">
-          <label>Email</label><br>
-          <input type="email" id="email" placeholder="Enter email" autocomplete="off"><br><br>
-          <label>Password</label><br>
-          <input type="password" id="password" placeholder="Password" autocomplete="off">
-        </div>
 
-        <div class="forget">
-            <a href="#">Forget password?</a>
-            <a href="signup.html" id="signup">Sign up</a>
-        </div>
-        <button type="button" onclick="login()" id="button">Log in</button>
+    <div class="signup-container">
 
-        <li id="list">
-            
-              #Important<br>   
-            1. Login to access all the notes.<br>
-            2. Enter valid email & password.
-            
-        </li>
+        <form class="signup-form" id="login-form">
 
-        </div>
-         
-    
+            <h1>Welcome Back</h1>
+            <p>Login to your account</p>
 
-    
-    
- <script type="module" src="login.js"></script>
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">Login</button>
+
+            <p class="login-text">
+                Don't have an account?
+                <a href="signup.html">Sign Up</a>
+            </p>
+
+        </form>
+
+    </div>
+
+    <script type="module" src="login.js"></script>
+
 </body>
 </html>

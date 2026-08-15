@@ -1,37 +1,49 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } 
-from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
+// Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Same config as signup
-const firebaseConfig = {
-    apiKey: "AIzaSyBleUR_S6pGI6iuYnKjsMpGogBCdjQAKK0",
-    authDomain: "notes-share-6cc17.firebaseapp.com",
-    projectId: "notes-share-6cc17",
-    storageBucket: "notes-share-6cc17.firebasestorage.app",
-    messagingSenderId: "891671444971",
-    appId: "1:891671444971:web:dbb601e7b8a69de03eedae",
-    measurementId: "G-4JZ71X3S8D"
-};
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAS9eI2QxfmZSsSJTA-TVliUxzEfZAgKi0",
+    authDomain: "catch-up-8c869.firebaseapp.com",
+    projectId: "catch-up-8c869",
+    storageBucket: "catch-up-8c869.firebasestorage.app",
+    messagingSenderId: "356768614723",
+    appId: "1:356768614723:web:1f59c32ff53b774c8e07f6",
+    measurementId: "G-JLG92RYG3E"
+  };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
 
-// Login function
-function login() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then(() => {
-        alert("Login Successful ✅");
-        window.location.href = "index.html"; // redirect
-    })
-        
-    .catch((error) => {
-      alert(error.message);
-    });
-}
+  const loginForm = document.getElementById("login-form");
 
-// Make function global
-window.login = login;
+  loginForm.addEventListener("submit", async(e) =>{
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    try {
+        const userCredential = await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+        console.log("Logged in user:",userCredential.user);
+        alert("Login successfully!");
+
+        window.location.href = "index.html";
+    }
+    catch {
+        console.log(error);
+        alert(error.message);
+    }
+
+  });
+
