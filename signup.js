@@ -34,6 +34,7 @@
     const password = document.querySelector("#password").value;
     const confirmPassword = document.querySelector("#confirm-password").value;
 
+
     if (password !== confirmPassword) {
         alert("Password do not match!");
         return;
@@ -45,7 +46,7 @@
             email,
             password
         );
-
+            const name = document.getElementById("name").value.trim();
             const user = userCredential.user;
 
             await addDoc(collection(db, "Users"),{
