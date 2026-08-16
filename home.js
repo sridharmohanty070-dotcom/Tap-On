@@ -23,42 +23,31 @@
   const db = getFirestore(app);
 
 
-  onAuthStateChanged(auth, (user) =>{
 
-    if(user){
-        console.log("User is logged in");
-        
+const myProfile = document.getElementById("my-profile"); 
+const login = document.getElementById("login");
+onAuthStateChanged(auth, async (user) => {
 
-    }
-    else {
-        console.log("No user is logged in");
+    if (!user) {
         window.location.href = "login.html";
+        return;
     }
-  });
 
+    login.style.display = "none";
 
-  const logoutButton = document.getElementById("logout-btn");
+    const q = query(
+        collection(db, "Users"),
+        where("uid", "==", user.uid)
+    );
 
-  logoutButton.addEventListener("click", async(e) =>{
+    const result = await getDocs(q);
 
-    try {
-        await signOut(auth);
+    if (!result.empty) {
 
-        alert("Logged out successfully!");
-
-        window.location.href = "login.html";
-    }
-    catch (error){
-        console.log(error);
-        alert(error.message);
-    }
-  });
-
+        const userDoc = result.docs[0];
+        const userData = userDoc.data();
       
+        myProfile.textContent = userData.name;
+    }
 
-
-
-
-
-
-
+}); 

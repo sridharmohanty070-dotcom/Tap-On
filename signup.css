@@ -33,6 +33,11 @@ body {
     color: #222;
 }
 
+.signup-form h2 {
+    text-align: center;
+    color: aqua;
+}
+
 .signup-form > p {
     text-align: center;
     color: #777;
