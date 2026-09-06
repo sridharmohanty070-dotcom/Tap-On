@@ -48,7 +48,7 @@ async function loadNotes() {
                     <p>${note.description}</p>
 
                     <a href="${note.link}" target="_blank" style=" color: green; ">
-                        Open Notes
+                        Open Link
                     </a>
 
                 </li>
