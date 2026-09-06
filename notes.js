@@ -21,8 +21,8 @@
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-const notesContainer =
-    document.getElementById("notesContainer");
+const notesList =
+    document.getElementById("notesList");
 
 
 // Get notes from Firebase
@@ -33,28 +33,30 @@ async function loadNotes() {
         const result =
             await getDocs(collection(db, "notes"));
 
+        
 
         result.forEach((doc) => {
 
             const note = doc.data();
 
-            notesContainer.innerHTML += `
+            notesList.innerHTML += `
 
-                <div class="note">
+                <li class="note" style= "margin-bottom: 20px;">
 
-                    <h3>${note.title}</h3>
+                    <h3 style= " color: orange;">${note.title}</h3>
 
                     <p>${note.description}</p>
 
-                    <a href="${note.link}" target="_blank">
+                    <a href="${note.link}" target="_blank" style=" color: green; ">
                         Open Notes
                     </a>
 
-                </div>
+                </li>
 
             `;
 
         });
+        
 
     } catch (error) {
 
